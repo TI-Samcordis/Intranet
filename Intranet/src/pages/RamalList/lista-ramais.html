@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Ramais - Hospital Samcordis</title>
+  <link rel="icon" href="/assets/IcoSamCordis.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .no-result td {
+      text-align: center;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+
+    th {
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+    }
+
+    th.asc::after {
+      content: "▲";
+      font-size: 12px;
+      position: absolute;
+      right: 8px;
+    }
+
+    th.decr::after {
+      content: "▼";
+      font-size: 12px;
+      position: absolute;
+      right: 8px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #000000;
+    }
+
+    header {
+      background: linear-gradient(90deg, #2a57a3, #1a3e7c);
+      letter-spacing: 1px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .container {
+      width: 98%;
+      margin: 15px auto;
+    }
+
+    #search {
+      margin-top: 60px;
+      margin-bottom: 12px;
+      width: 100%;
+      padding: 14px 20px 14px 45px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      outline: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+
+    #search:focus {
+      box-shadow: 0 0 0 3px rgba(8, 78, 199, 0.3);
+    }
+
+.search-container{
+    position: relative;
+    width: 97%;
+    margin-left: 1%;
+}
+
+.search-container i{
+    position: absolute;
+    left: 15px;
+    top: 70%;
+    transform: translateY(-50%);
+    color: #2a57a3;   
+}
+
+.search-container text{
+  padding-left: 5%;
+}
+
+    .table-container {
+        overflow-x: auto;
+        overflow-y: auto;     /* ativa scroll vertical */
+        max-height: 60vh;    /* altura máxima da tabela */
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: white;
+    }
+
+    thead { 
+      color: white;
+      font-weight: bold;
+    }
+
+    thead th {
+    position: sticky;
+    top: 0;
+    background: #2a57a3;
+    z-index: 2000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  }
+
+    th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #dfe6ea;
+    border-right: 1px solid #dfe6ea;
+    font-size: 15px;
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #eaf4f7;
+    }
+
+    tbody tr {
+      opacity: 0;
+      animation: fadeIn 0.3s forwards;
+    }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <main>
+    <div class="container">
+      <!-- Campo de busca -->
+      <div class="search-container">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="text" id="search" placeholder="Pesquisar por setor, nome ou ramal..." onkeyup="filtrarTabela()" />
+</div>
+      <div class="table-container">
+        <table id="ramaisTable">
+          <thead>
+            <tr>
+              <th>Setor</th>
+              <th>Ramal</th>
+              <th>DDR</th>
+              <th>Nome</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaRamais">
+            <!-- JSON será carregado aqui automaticamente -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Logo -->
+      <div class="footer-logo">
+        <a href="/index.html">
+          <img src="/assets/SamCordis ( logo branca ).png" alt="Hospital Samcordis">
+        </a>
+      </div>
+
+      <!-- Informações -->
+      <div class="footer-info">
+        <div class="footer-item">
+          <h4>Responsável pelo site</h4>
+          <p>Tecnologia da Informação (TI)<br><b>Ramal 2257</b></p>
+        </div>
+
+        <div class="footer-item">
+          <h4>Responsável pelo Cardápio</h4>
+          <p>Setor de Nutrição<br><b>Ramal 2220</b></p>
+        </div>
+
+        <div class="footer-item">
+          <h4>Responsável pelas Notícias</h4>
+          <p>Recursos Humanos (RH)<br><b>Ramal 2262</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p>© 2025 - 2026 | Todos os direitos reservados a equipe da TI</p>
+    </div>
+  </footer>
+
+  <script>
+
+    // ================================================
+    // 🔵 CARREGAR JSON E POPULAR A TABELA
+    // ================================================
+    async function carregarRamais() {
+      try {
+        const response = await fetch("ramais.json?cache=" + Date.now());
+        const dados = await response.json();
+
+        const tbody = document.getElementById("tabelaRamais");
+        tbody.innerHTML = "";
+
+        dados.forEach(item => {
+          const linha = document.createElement("tr");
+
+          linha.innerHTML = `
+            <td>${item.setor}</td>
+            <td>${item.ramal}</td>
+            <td>${item.ddr}</td>
+            <td>${item.responsavel}</td>
+          `;
+
+          tbody.appendChild(linha);
+        });
+
+      } catch (erro) {
+        console.error("Erro ao carregar JSON:", erro);
+      }
+    }
+
+    carregarRamais();
+
+
+    // ================================================
+    // 🔵 FILTRAR
+    // ================================================
+    function filtrarTabela() {
+      const filtro = document.getElementById("search").value.toLowerCase();
+      const tbody = document.getElementById("tabelaRamais");
+      const linhas = Array.from(tbody.querySelectorAll("tr"));
+
+      let visiveis = 0;
+
+      linhas.forEach(linha => {
+        // Ignora a linha de mensagem
+        if (linha.classList.contains("no-result")) return;
+
+        const match = linha.innerText.toLowerCase().includes(filtro);
+        linha.style.display = match ? "" : "none";
+
+        if (match) visiveis++;
+      });
+
+      // Remove mensagem antiga se existir
+      const msgAntiga = tbody.querySelector(".no-result");
+      if (msgAntiga) msgAntiga.remove();
+
+      // Se não houver resultados, cria a linha
+      if (visiveis === 0) {
+        const tr = document.createElement("tr");
+        tr.classList.add("no-result");
+
+        tr.innerHTML = `
+      <td colspan="4" style="
+        padding: 20px;
+        font-weight: bold;
+        color: #c0392b;
+        background: #fdecea;
+      ">
+        ❌ Nenhum ramal encontrado
+      </td>
+    `;
+
+        tbody.appendChild(tr);
+      }
+    }
+
+
+    // ================================================
+    // 🔵 ORDENAR TABELA
+    // ================================================
+    document.querySelectorAll("th").forEach((th, index) => {
+      th.addEventListener("click", () => sortTable(index, th));
+    });
+
+    function sortTable(colIndex, thClicked) {
+      const table = document.getElementById("ramaisTable");
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+
+      // remove classes das outras colunas
+      document.querySelectorAll("th").forEach(th => {
+        if (th !== thClicked) th.classList.remove("asc", "decr");
+      });
+
+      let isAsc = thClicked.classList.contains("asc");
+      thClicked.classList.toggle("asc", !isAsc);
+      thClicked.classList.toggle("decr", isAsc);
+
+      rows.sort((a, b) => {
+        const aText = a.children[colIndex].innerText.toLowerCase();
+        const bText = b.children[colIndex].innerText.toLowerCase();
+
+        const aNum = parseFloat(aText);
+        const bNum = parseFloat(bText);
+
+        if (!isNaN(aNum) && !isNaN(bNum)) {
+          return !isAsc ? aNum - bNum : bNum - aNum;
+        } else {
+          return !isAsc
+            ? aText.localeCompare(bText)
+            : bText.localeCompare(aText);
+        }
+      });
+
+      rows.forEach(row => tbody.appendChild(row));
+    }
+  </script>
+  <script src="/js/login.js"></script>
+  <script src="/js/buttons.js"></script>
+  <script src="/js/navbar-loader.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+
+</html>

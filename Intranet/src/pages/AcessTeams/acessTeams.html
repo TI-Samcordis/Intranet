@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual - Acesso MV</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/assets/IcoSamCordis.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        b,
+        u {
+            color: #2a57a3;
+        }
+
+        .Out {
+            display: block;
+            margin: 30px auto 0 auto;
+            padding: 6px 20px;
+            width: 200px;
+            text-align: center;
+            border: 2px solid #000000;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.25s ease;
+            text-transform: uppercase;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            transition: .5s;
+            background: #ffffff;
+            color: #000;
+            margin-bottom: 1%;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .Out:hover {
+            background: rgb(121, 30, 27);
+            box-shadow: 0 0 20px 5px rgba(247, 69, 37, 0.7);
+            border: none;
+            color: #fff;
+        }
+
+        .copy-btn {
+            cursor: pointer;
+            border: none;
+            background: #ddd;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .copy-btn:hover {
+            background: #ccc;
+        }
+
+        .logoMv {
+            display: block;
+            margin: 40px auto;
+            max-width: 25%;
+            height: auto;
+            border-radius: 8px;
+        }
+ 
+
+        .intro {
+            margin-top: 7%;
+            font-size: 3.5em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="content">
+
+    <!-- Conteúdo da página -->
+    <main style="display: flex; flex-direction: column;">
+
+        <!--FIRST SECTION-->
+        <section class="first-section"> 
+            <div class="first-container">
+                <p class="intro" id="typewriter"></p>
+            </div>
+             <div class="image-container">
+                <img src="/assets/AcessTeams/teams.png" alt="exemplo de tela" class="logoMv">
+            </div>
+
+            <div class="desc">                 
+                <p>Esta página é destinada para ensinar como acessar o Microsoft Teams pelo Microsoft 365 (Outlook, Sharepoint e etc)</p>
+                <p>Caso já saiba, apenas clique no link abaixo para se redirecionar ao Teams.</p>
+                <span id="meuLink" style="cursor: text;"><a
+                        href="https://teams.microsoft.com/v2/"><u>Link para o Teams</u></a></span>
+                <p>Seguem os passos abaixo usando o Outlook como ponto de partida.</p>
+            </div>
+        </section>
+
+
+                <section class="steps">
+                    <h2>Passo 1</h2>
+                    <p>No canto da tela, clique no Inicializador de aplicativos.</p>
+                </section>
+
+                <div class="image-container">
+                    <img src="/assets/AcessTeams/inicializador de aplicativos.png" alt="exemplo de tela" class="p5f-image">
+                </div>
+
+                <section class="steps">
+                    <h2>Passo 2</h2>
+                    <p>Selecione o ícone do qual abaixo está escrito "Teams"</p>
+                </section>
+
+                <div class="image-container" style="margin-top: 1%;">
+                    <img src="/assets/AcessTeams/inicializador de aplicativos2.png" alt="exemplo de tela" class="p5f-image">
+                </div>            
+             
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Logo -->
+            <div class="footer-logo">
+                <a href="/index.html">
+                    <img src="/assets/SamCordis ( logo branca ).png" alt="Hospital Samcordis">
+                </a>
+            </div>
+
+            <!-- Informações -->
+            <div class="footer-info">
+                <div class="footer-item">
+                    <h4>Responsável pelo site</h4>
+                    <p>Tecnologia da Informação (TI)<br><b>Ramal 2257</b></p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Responsável pelo Cardápio</h4>
+                    <p>Setor de Nutrição<br><b>Ramal 2220</b></p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Responsável pelas Notícias</h4>
+                    <p>Recursos Humanos (RH)<br><b>Ramal 2262</b></p>
+                </div>
+            </div>           
+        </div>
+        <div class="footer-right">
+            <p>© 2025 - 2026 | Todos os direitos reservados a equipe da TI</p>
+        </div>   
+    </footer>
+
+    <script>
+
+        function copiarTexto(idTexto, idMensagem) {
+            const texto = document.getElementById(idTexto).innerText;
+
+            // Cria uma área de texto temporária
+            const textarea = document.createElement("textarea");
+            textarea.value = texto;
+            document.body.appendChild(textarea);
+
+            // Seleciona e copia
+            textarea.select();
+            document.execCommand("copy");
+
+            // Remove o elemento temporário
+            document.body.removeChild(textarea);
+
+            // Mostra a mensagem "Copiado!"
+            const msg = document.getElementById(idMensagem);
+            msg.style.display = "inline";
+
+            setTimeout(() => {
+                msg.style.display = "none";
+            }, 1500);
+        }
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const text = "Como acessar o Teams.";
+            const element = document.getElementById("typewriter");
+            let index = 0;
+
+            function typeEffect() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, 40); // velocidade da digitação
+                }
+            }
+
+            typeEffect();
+        });
+    </script>
+    
+
+    <script src="/js/login.js"></script>
+    <script src="/js/buttons.js"></script>
+    <script src="/js/navbar-loader.js"></script>
+</body>
+
+</html>

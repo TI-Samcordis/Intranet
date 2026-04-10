@@ -1,0 +1,204 @@
+/* =========================
+   NAVBAR — CSS MODULE
+   ========================= */
+
+.topNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    opacity: 0.9;
+    background-color: #1f4e96;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 1000;
+    box-shadow: 0 0 5px 5px #0065fd;
+}
+
+/* ── Zonas ── */
+
+.navLeft,
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navLeft img {
+    height: 40px;
+    margin-top: 10%;
+}
+
+.navCenter {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: auto;
+}
+
+/* ── Logo como botão ── */
+
+.logoBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* ── Botão genérico da nav ── */
+
+.navBtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 8px;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+}
+
+.navBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+.navBtnWide {
+    width: 100px;
+    font-size: 100%;
+}
+
+/* ── Botão Login / Logout ── */
+
+.loginBtn {
+    margin-left: auto;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 7px 18px;
+    transition: 0.5s;
+}
+
+.loginBtn i {
+    margin-left: 4px;
+}
+
+.loginBtn:hover {
+    background: #fff;
+    color: #1f4e96;
+}
+
+/* =========================
+   DROPDOWN SIMPLES (Nutrição)
+   ========================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: 4px;
+    left: 0;
+    min-width: 180px;
+    background: #1f4e96;
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+}
+
+/* Área invisível para não fechar ao mover o mouse */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+/* =========================
+   DROPDOWN MEGA-MENU (TI)
+   ========================= */
+
+.dropdownTI {
+    position: relative;
+}
+
+.dropdownTIContent {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100vw;
+    background: #1f4e96;
+    padding: 35px 80px;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 0 5px 2px #0065fd;
+    margin-top: 10px;
+}
+
+/* Área invisível para não fechar */
+.dropdownTI::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.dropdownTI:hover .dropdownTIContent,
+.dropdownTIContent:hover {
+    display: flex;
+    justify-content: center;
+}
+
+/* ── Container interno do mega-menu ── */
+
+.megaDropdown {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+}
+
+/* ── Colunas ── */
+
+.megaColumn {
+    min-width: 240px;
+}
+
+.megaColumn h4 {
+    color: #4d8eff;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ── Links dentro das colunas ── */
+
+.megaLink {
+    display: block;
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: padding-left 0.25s;
+}
+
+.megaLink:hover {
+    padding-left: 6px;
+    color: #ffffff;
+}

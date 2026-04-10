@@ -1,0 +1,693 @@
+[
+    {
+        "id": 1,
+        "setor": "Autorização\/Prorrogação",
+        "ramal": "2298",
+        "ddr": "—",
+        "responsavel": "Jessica"
+    },
+    {
+        "setor": "Autorização\/Prorrogação",
+        "ramal": "2293",
+        "ddr": "—",
+        "responsavel": "Karen"
+    },
+    {
+        "setor": "Administração (Sec. Diretoria)",
+        "ramal": "2242",
+        "ddr": "8002",
+        "responsavel": "Liege"
+    },
+    {
+        "setor": "Almoxarifado",
+        "ramal": "2150",
+        "ddr": "—",
+        "responsavel": "Gabriel"
+    },
+    {
+        "setor": "Cafeteria",
+        "ramal": "2269",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "CCIH",
+        "ramal": "2131",
+        "ddr": "—",
+        "responsavel": "Douglas\/Gabriel"
+    },
+    {
+        "setor": "Central de Exames",
+        "ramal": "2223",
+        "ddr": "—",
+        "responsavel": "Joyce\/Sueli"
+    },
+    {
+        "setor": "Centro Cirúrgico",
+        "ramal": "2255",
+        "ddr": "8007",
+        "responsavel": "Vanessa"
+    },
+    {
+        "setor": "Centro Cirúrgico",
+        "ramal": "2252",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Central de Estudos (Cesam)",
+        "ramal": "2253",
+        "ddr": "—",
+        "responsavel": "Luana"
+    },
+    {
+        "setor": "Centro Médico\/ 1º andar",
+        "ramal": "515",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Centro Médico\/Consultório",
+        "ramal": "2126",
+        "ddr": "—",
+        "responsavel": "Dr.Adalberto"
+    },
+    {
+        "setor": "Centro Médico\/Consultório",
+        "ramal": "2125",
+        "ddr": "—",
+        "responsavel": "Dr.Sérgio"
+    },
+    {
+        "setor": "Centro Médico\/Consultório 7",
+        "ramal": "2124",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Centro Médico\/Consultório",
+        "ramal": "2123",
+        "ddr": "—",
+        "responsavel": "Dr.Paulo\/Dr.Felipe"
+    },
+    {
+        "setor": "Centro Médico\/Consultório",
+        "ramal": "2122",
+        "ddr": "—",
+        "responsavel": "Dr. Luiz Rubem"
+    },
+    {
+        "setor": "Centro Médico\/Recepção",
+        "ramal": "2133",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Centro Médico\/Recepção",
+        "ramal": "2135",
+        "ddr": "—",
+        "responsavel": "Shirley"
+    },
+    {
+        "setor": "Centro Médico\/Recepção",
+        "ramal": "2136",
+        "ddr": "—",
+        "responsavel": "Ariana"
+    },
+    {
+        "setor": "Centro Médico\/Recepção",
+        "ramal": "148",
+        "ddr": "—",
+        "responsavel": "Renato"
+    },
+    {
+        "setor": "Compras (Suprimentos)",
+        "ramal": "2260",
+        "ddr": "8006",
+        "responsavel": "Gisele"
+    },
+    {
+        "setor": "Compras (Suprimentos)",
+        "ramal": "2270",
+        "ddr": "—",
+        "responsavel": "Arilson"
+    },
+    {
+        "setor": "Copa 1º Andar",
+        "ramal": "2258",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Copa 2º Andar",
+        "ramal": "2268",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Copa 3º Andar",
+        "ramal": "2137",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "TI",
+        "ramal": "2257",
+        "ddr": "—",
+        "responsavel": "Jayro\/Diego"
+    },
+    {
+        "setor": "CTI",
+        "ramal": "2256",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "CTI",
+        "ramal": "2240",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "CTI",
+        "ramal": "2264",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "CTI",
+        "ramal": "2244",
+        "ddr": "—",
+        "responsavel": "Round"
+    },
+    {
+        "setor": "Departamento Pessoal",
+        "ramal": "2249",
+        "ddr": "8009",
+        "responsavel": "Gilcinei"
+    },
+    {
+        "setor": "Departamento Pessoal",
+        "ramal": "2246",
+        "ddr": "—",
+        "responsavel": "Vanessa"
+    },
+    {
+        "setor": "Eco",
+        "ramal": "2226",
+        "ddr": "—",
+        "responsavel": "Fátima\/Carla"
+    },
+    {
+        "setor": "Emergência",
+        "ramal": "2250",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Emergência",
+        "ramal": "2251",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Enfermaria A - 1º Andar",
+        "ramal": "2273",
+        "ddr": "8037",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Enfermaria A - 2º Andar",
+        "ramal": "2299",
+        "ddr": "8028",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Enfermaria B - 1º Andar",
+        "ramal": "2272",
+        "ddr": "8038",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Enfermaria B - 2º Andar",
+        "ramal": "2210",
+        "ddr": "8029",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Engenharia Clínica",
+        "ramal": "2297",
+        "ddr": "—",
+        "responsavel": "Marluse"
+    },
+    {
+        "setor": "Ergometria",
+        "ramal": "2229",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Esterilização",
+        "ramal": "2254",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Farmácia Central",
+        "ramal": "2263",
+        "ddr": "8003",
+        "responsavel": "Iraneide"
+    },
+    {
+        "setor": "Farmácia Central",
+        "ramal": "2236",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Farmácia Satélite Centro Cirúrgico",
+        "ramal": "2149",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Faturamento",
+        "ramal": "2217",
+        "ddr": "8004",
+        "responsavel": "Vanuza\/Simone"
+    },
+    {
+        "setor": "Faturamento",
+        "ramal": "2261",
+        "ddr": "—",
+        "responsavel": "Alessandra"
+    },
+    {
+        "setor": "Faturamento",
+        "ramal": "2248",
+        "ddr": "—",
+        "responsavel": "Luciana"
+    },
+    {
+        "setor": "Faturamento",
+        "ramal": "2292",
+        "ddr": "—",
+        "responsavel": "Sheila\/Rodrigo"
+    },
+    {
+        "setor": "Financeiro",
+        "ramal": "2222",
+        "ddr": "8039",
+        "responsavel": "Larissa\/Michele"
+    },
+    {
+        "setor": "Financeiro",
+        "ramal": "2267",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Financeiro",
+        "ramal": "2290",
+        "ddr": "—",
+        "responsavel": "Fabiana"
+    },
+    {
+        "setor": "Gerência de Enfermagem",
+        "ramal": "2239",
+        "ddr": "—",
+        "responsavel": "Patrícia"
+    },
+    {
+        "setor": "Gerência de Manutenção",
+        "ramal": "2296",
+        "ddr": "—",
+        "responsavel": "Pedro"
+    },
+    {
+        "setor": "Hemodinâmica (Unidade Intermediária)",
+        "ramal": "2294",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Hemodinâmica (Exames)",
+        "ramal": "2259",
+        "ddr": "—",
+        "responsavel": "Luiz"
+    },
+    {
+        "setor": "Hemodinâmica (Recepção)",
+        "ramal": "2241",
+        "ddr": "—",
+        "responsavel": "Valéria"
+    },
+    {
+        "setor": "Hotelaria",
+        "ramal": "2265",
+        "ddr": "—",
+        "responsavel": "Cirliane"
+    },
+    {
+        "setor": "Laboratório (2º andar)",
+        "ramal": "2219",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Laboratório (2º andar)",
+        "ramal": "2286",
+        "ddr": "—",
+        "responsavel": "Mateus"
+    },
+    {
+        "setor": "Laboratório Centro Médico",
+        "ramal": "2134",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Lavanderia\/Rouparia",
+        "ramal": "2282",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Manutenção",
+        "ramal": "2247",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Marcação de Consulta",
+        "ramal": "3366",
+        "ddr": "8008",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Marcação de Consulta",
+        "ramal": "2140",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Marcação de Consulta",
+        "ramal": "2141",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Marcação de Consulta",
+        "ramal": "2142",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Marcação de Consulta",
+        "ramal": "2132",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Marketing",
+        "ramal": "2287",
+        "ddr": "—",
+        "responsavel": "Daniel"
+    },
+    {
+        "setor": "Nutrição",
+        "ramal": "2220",
+        "ddr": "8020",
+        "responsavel": "Néia"
+    },
+    {
+        "setor": "OPME",
+        "ramal": "2250",
+        "ddr": "—",
+        "responsavel": "Débora"
+    },
+    {
+        "setor": "Portaria",
+        "ramal": "2237",
+        "ddr": "—",
+        "responsavel": "Roberto\/Leandro"
+    },
+    {
+        "setor": "Posto de Enf. - 1º Andar",
+        "ramal": "2216",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Posto de Enf. - 2º Andar",
+        "ramal": "2224",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Posto de Enf. - 3º Andar",
+        "ramal": "2198",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 101",
+        "ramal": "2101",
+        "ddr": "8011",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 102",
+        "ramal": "2102",
+        "ddr": "8012",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 103",
+        "ramal": "2103",
+        "ddr": "8013",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 104",
+        "ramal": "2104",
+        "ddr": "8014",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 105",
+        "ramal": "2105",
+        "ddr": "8015",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 106",
+        "ramal": "2106",
+        "ddr": "8016",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 107",
+        "ramal": "2107",
+        "ddr": "8017",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 108",
+        "ramal": "2108",
+        "ddr": "8018",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 109",
+        "ramal": "2109",
+        "ddr": "8019",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 110",
+        "ramal": "2110",
+        "ddr": "8010",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 201",
+        "ramal": "2201",
+        "ddr": "8021",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 202",
+        "ramal": "2202",
+        "ddr": "8022",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 203",
+        "ramal": "2203",
+        "ddr": "8023",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 204",
+        "ramal": "2204",
+        "ddr": "8024",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 205",
+        "ramal": "2205",
+        "ddr": "8025",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 206",
+        "ramal": "2206",
+        "ddr": "8026",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 207",
+        "ramal": "2207",
+        "ddr": "8027",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 301",
+        "ramal": "2301",
+        "ddr": "8031",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 302",
+        "ramal": "2302",
+        "ddr": "8032",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 303",
+        "ramal": "2303",
+        "ddr": "8033",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 304",
+        "ramal": "2304",
+        "ddr": "8034",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 305",
+        "ramal": "2305",
+        "ddr": "8035",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto 306",
+        "ramal": "2306",
+        "ddr": "8036",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto dos Médicos\/ CTI",
+        "ramal": "2213",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Quarto dos Médicos\/ Emerg",
+        "ramal": "2231",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Recepção Emergência",
+        "ramal": "2243",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Recepção Emergência",
+        "ramal": "2266",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Recepção Emergência",
+        "ramal": "2199",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Recepção Internação",
+        "ramal": "2305",
+        "ddr": "8005",
+        "responsavel": "Alexandre"
+    },
+    {
+        "setor": "Recepção Internação",
+        "ramal": "2225",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Refeitório",
+        "ramal": "2221",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "RH\/Psicologia",
+        "ramal": "2262",
+        "ddr": "—",
+        "responsavel": "Brendha\/Amanda"
+    },
+    {
+        "setor": "Segurança do Trabalho",
+        "ramal": "2233",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Triagem",
+        "ramal": "2271",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Tomografia",
+        "ramal": "2218",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Tomografia",
+        "ramal": "2232",
+        "ddr": "—",
+        "responsavel": "Thaís"
+    },
+    {
+        "setor": "Unidade Coronáriana",
+        "ramal": "2215",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Unidade Semi-Intensiva",
+        "ramal": "2288",
+        "ddr": "—",
+        "responsavel": "—"
+    },
+    {
+        "setor": "Popvida",
+        "ramal": "2133",
+        "ddr": "—",
+        "responsavel": ""
+    },
+    {
+        "setor": "Relacionamento Médico",
+        "ramal": "2197",
+        "ddr": "—",
+        "responsavel": "Ingrid"
+    }
+]

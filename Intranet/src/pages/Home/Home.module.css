@@ -1,0 +1,57 @@
+.firstSection {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-snap-align: start;
+}
+
+.secondSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    scroll-snap-align: start;
+}
+
+/* .tools {
+    background-color: #3669b6;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    opacity: .9;
+    box-shadow: 5px 5px 5px 5px #b8b8b8;
+}
+
+.toolbox {
+    display: flex;
+}
+
+.minB {
+    transition: .3s;
+    cursor: pointer;
+}
+
+.minB:hover {
+    transform: scale(1.35);
+    transition: .3s;
+} */
+
+.noticiaCard {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.bgTI {
+    background-image: url("/assets/FundoTI2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.typewriterTI {
+    color: #fff;
+}

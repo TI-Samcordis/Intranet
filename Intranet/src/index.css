@@ -1,0 +1,746 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+    background-image: url("./assets/Fundo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+header {
+    background-color: #2a57a3;
+    color: #fff;
+    text-align: center;
+}
+
+h2,
+h3 {
+    color: #2a57a3;
+    margin-bottom: 10px;
+}
+
+
+
+section {
+    margin-bottom: 20px;
+}
+
+
+.desc {
+    font-size: larger;
+    background-color: #fff;
+    opacity: 0.9;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 20px 20px;
+    outline: 3px solid #053381;
+    margin: 40px auto;
+    height: auto;
+}
+
+/* Conteúdo principal que empurra o rodapé */
+.content,
+.container {
+    flex: 1;
+}
+
+/* =========================
+   IMAGENS
+   ========================= */
+.image-container {
+    text-align: start;
+    margin-left: 2%;
+}
+
+.intro-image {
+    margin-top: 4%;
+    max-width: 50%;
+    margin-left: 23%;
+    height: auto;
+}
+
+.index-image {
+    margin-top: 4%;
+    max-width: 70%;
+    margin-left: 12%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-imageTI {
+    margin-top: 4%;
+    max-width: 50%;
+    margin-left: 23%;
+    height: auto;
+    /* margin-left: 32%;
+    max-width: 40%;
+    height: auto;
+    width: 40em;
+    border-radius: 8px;
+    margin-top: 1%;
+    margin-bottom: 1%; */
+}
+
+.logo {
+    display: block;
+    margin: 40px auto;
+    max-width: 25%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.pc-image {
+    margin-left: 30%;
+    max-width: 20%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.p5f-image {
+    max-width: 70%;
+    height: auto;
+}
+
+/* =========================
+   FIRST SECTION
+   ========================= */
+.first-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-snap-align: start;
+}
+
+/* =========================
+   SECOND SECTION
+   ========================= */
+
+.second-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;     
+    height: 50vh;
+    scroll-snap-align: start;
+}
+
+.second-container {
+    height: 800%;
+    width: 80%;
+}
+
+.tools {
+    background-color: #3669b6;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    opacity: .9;
+    box-shadow: 5px 5px 5px 5px #b8b8b8;
+}
+
+.tools h1 {
+    color: #fff;
+    text-align: center;
+    padding-top: 4%;
+    font-size: 3em;
+}
+
+.index-image2{
+    max-width: 50%;
+    height: 10em;
+    width: 60em;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+
+.toolbox{
+    display: flex;
+}
+
+.minB {
+    transition: .3s;
+    cursor: pointer;
+}
+
+.minB:hover{
+    transform: scale(1.35);
+    transition: .3s;
+}
+
+/* Texto Inicial */
+.intro {
+    margin-top: 0%;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-top: 2%;
+    text-align: center;
+}
+
+#typewriter::after {
+    content: "|";
+    animation: blink 1s infinite;
+    color: #2a57a3;
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+/* Btn-Container  */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+    margin-top: 8%;
+    width: 40%;
+}
+
+.minibtn-container1 {
+    width: 80%;
+}
+
+.minibtn-container2 {
+    margin-left: 5%;
+    width: 50%;
+}
+
+/* =========================
+   NOTICIAS
+   ========================= */
+
+/* ===== CARD PADRÃO NOTÍCIA ===== */
+
+#noticias {
+    width: 100%;
+    height: 1000px;
+}
+
+.noticia-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Título */
+.noticia-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+/* Data */
+.noticia-card small {
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Imagem vertical padrão */
+.imagem-noticia {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Texto */
+.noticia-texto {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Botão */
+.noticia-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #2a57a3;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.noticia-btn:hover {
+    background: #224b91;
+    box-shadow: 0 0 15px rgba(42, 87, 163, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .imagem-noticia {
+        width: 100%;
+        height: auto;
+    }
+
+    .noticia-card {
+        margin: 20px;
+    }
+}
+
+/* =========================
+   NAV SUPERIOR
+   ========================= */
+
+nav.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    opacity: .9;
+    background-color: #1f4e96;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 1000;
+    box-shadow: 0 0 5px 5px #0065fd;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-left img {
+    height: 40px;
+    margin-top: 10%;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: auto; 
+}
+
+/* =========================
+   DROPDOWN DA NAV (MVSOUL E MVPEP)
+   ========================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    margin-top: 4px; 
+    left: 0;
+    min-width: 180px;
+    background: #1f4e96;
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px; /* área invisível */
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    color: #fff;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #3669b6;
+    border-radius: 0 0 6px 6px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* =========================
+   DROPDOWN DA TI
+   ========================= */
+
+
+.dropdownTI {
+    position: relative;
+}
+
+
+.dropdownTI-content {
+    position: fixed;
+    top: 40px; /* MESMA altura da navbar */
+    left: 0;
+    width: 100vw;
+    background: #1f4e96;
+    padding: 35px 80px;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 0 5px 2px #0065fd;
+    margin-top: 10px;
+}
+
+
+.dropdownTI::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 30px; /* área invisível */
+}
+
+/* CONTAINER CENTRAL */
+.mega-dropdown {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+}
+
+/* COLUNAS */
+.mega-column {
+    min-width: 240px;
+    color: #1f4e96;
+}
+
+/* TÍTULOS */
+.mega-column h4 {
+    color: #4d8eff;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* LINKS */
+.mega-column a {
+    display: block;
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: 0.25s;
+}
+
+/* HOVER */
+.mega-column a:hover {
+    padding-left: 6px;
+    color: #ffffff;
+}
+
+.mega-column button {
+    display: block;
+    color: #1f2d3d;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: 0.25s;
+}
+
+/* HOVER */
+.mega-column button:hover {
+    color: #1f4e96;
+    padding-left: 6px;
+}
+
+/* EXIBIR */
+.dropdownTI:hover .dropdownTI-content {
+    display: flex;
+    justify-content: center;
+}
+
+/* EVITA FECHAR AO ENTRAR NO MENU */
+.dropdownTI-content:hover {
+    display: block;
+}
+
+
+/* BOTÃO DA NAVBAR*/
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 8px;
+    letter-spacing: 0.5px;
+}
+
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.15);
+    border-radius: 4px;
+}
+
+/* =========================
+   BOTÕES
+   ========================= */
+
+/* ===== BOTÃO LOGIN / LOGOUT (SUBSTITUI AUTOMATICAMENTE) ===== */
+
+.btn-login,
+.btn-logout {
+    display: block;
+    /* margin: 100px auto 0 auto; */
+    margin-top: 3px;
+    padding: 12px 28px;
+    width: 200px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    transition: .5s;
+    background: #1f4e96;
+    color: #fff;
+    margin-left: 88%;
+}
+
+/* LOGIN */
+.btn-login:hover {
+    color: #fff;
+    background: #09792e;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px #a1b2ca;
+    transform: scale(1.0);
+}
+
+/* LOGOUT */
+.btn-logout:hover {
+    color: #fff;
+    background: #b52d2a;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px #e68281;
+    transform: scale(1.0);
+}
+
+.login-btn {
+    margin-left: auto;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 7px 18px;
+    transition: .5s;
+}
+
+.login-btn i {
+    margin-left: 4px;
+}
+
+.login-btn:hover {
+    background: #fff;
+    color: #1f4e96;
+    border-radius: 20px;
+    padding: 7px 18px;
+    transition: .5s;
+}
+
+/* BOTÃO GERAL */
+.btn-acesso {
+    margin-top: 3em;
+    width: 15vw;
+    height: 4vw;
+    text-align: center;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    border: 2px solid #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.btn-acesso:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+/*FINAL DE BOTÕES*/
+/*------*/  
+
+.steps {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #000;
+    background-color: #fff;
+    opacity: 0.9;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 20px 20px;
+    outline: 3px solid #053381;
+}
+
+ol {
+    margin-left: 20px;
+}
+
+/* Rodapé dinâmico */
+footer.footer {
+    background-color: #2a57a3;
+    color: #fff;
+    margin-top: auto;
+    padding: 25px 0;
+    font-size: 0.85rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Logo */
+.footer-logo img {
+    width: 60%;
+    height: auto;
+}
+
+/* Área de informações */
+.footer-info {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Cada bloco */
+.footer-item h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.footer-item p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #e6e6e6;
+}
+
+.footer-item b {
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer-right p{
+    margin-left: 39%;
+    margin-top: 1%;
+}
+
+@media (max-width: 600px) {
+    .intro-image {
+        max-width: 80%;
+    }
+
+    .sidebar:hover {
+        width: 180px;
+    }
+
+    main {
+        margin-left: 50px;
+    }
+}
+
+header.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2a57a3;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.container-header {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+}
+
+.header-logo img {
+    width: 140px;
+}
+
+/* MENU */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   BOTÃO CARDÁPIO
+   ========================= */
+
+.btn-cta {
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+}

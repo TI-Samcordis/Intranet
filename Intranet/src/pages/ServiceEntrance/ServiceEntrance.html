@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual - Entrada de Serviço</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/assets/IcoSamCordis.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        b,
+        u {
+            color: #2a57a3;
+        }
+
+        body {
+            background-image: url("/assets/FundoTI2.png");
+        }
+
+        .intro {
+            margin-top: 7%;
+            font-size: 3.5em;
+            text-transform: uppercase;
+            text-align: center;
+            color: #ffffff;
+            background-color: #1f4e96;
+            padding: 20px 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 5px 5px #0065fd;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <main>
+        
+        <!--FIRST SECTION-->
+        <section class="first-section">
+            <div class="first-container">
+                <p class="intro" id="typewriter"></p>
+            </div>
+
+            <div class="image-container">
+                <img src="/assets\m_pc.jpg" alt="Imagem de formatação" class="logo">
+            </div>
+
+            <div class="desc">
+                <h2>Atenção</h2>
+                <p>É necessário ter em mãos o número da Ordem de Compras, caso você não tenha, vá para: <a
+                    href="/pages/PurchaseOrder/purchaseOrder.html" style="text-decoration: none; color: #2a57a3;">Ordem
+                    de Compras</a></p>
+            </div>
+        </section>       
+
+        <section class="steps">
+            <h2>Passo 1</h2>
+            <p>Abrir o MV e acessar: Materiais e Logistica ➝ Almaxorifado ➝ movimentações ➝ Entradas ➝ Entrada
+                de Serviços</p>
+        </section>
+
+        <div class="image-container">
+            <img src="/assets/InvoiceEntry/Invoice1.png" alt="exemplo de tela" class="p5f-image">
+        </div>
+
+        <section class="steps">
+            <h2>Passo 2</h2>
+            <h3>Preencher: </h3>
+            <div class="image-container">
+                <img src="/assets/InvoiceEntry/Invoice2.png" alt="exemplo de tela" class="p5f-image">
+            </div>
+            <p>▪ Ord.Compras</p>
+            <p>▪ Tipos de documento</p>
+            <p>▪ Oficina e escolher a oficina <b style="color: #2a57a3;">INFORMÁTICA</b></p>
+            <p>▪ Colocar o Nr.Documento(número da Nota Fiscal)</p>
+            <p>▫ Se for nota de serviço por <b>E</b>, de produto tem série.▫</p>
+            <p>▪ Data de Emissão</p>
+            <p>▪ Por CFOP, vem na nota.</p>
+            <p>▫ <b>IMPORTANTE:</b> se for nota de serviço o CFOP será <b>6933</b>, produto vê na <b>Nota
+                    Fiscal</b>▫</p>
+            <p>▪ Descer a tela e apertar em <b style="color: #2a57a3;">serviços</b></p>
+            <p>▫ Conferir os dados da tela, sair de serviços (botão "sair")▫</p>
+            <p>▪ Clicar no botão DUPLICATA</p>
+            <p>▫ Conferir os dados da tela, e <b>confirmar Duplicata</b>▫</p>
+            <p>▪ Concluir e avaliar</p>
+            <p>▪ Apertar no botão de sair, na parte de cima da tela.</p>
+            <div class="image-container">
+                <img src="/assets/InvoiceEntry/Invoice3.png" alt="exemplo de tela" class="p5f-image">
+            </div>
+            <p>▫ <b>IMPORTANTE:</b> Irá aparecer uma tela, perguntando se deseja limpar a tela, Colocar
+                <b>NÃO!</strong>▫
+            </p>
+            <p>▪ Clicar no botão <b>Entrada de Serviços</b></p>
+            <p>▪ IMPRIMIR</p>
+            <p>▪ Grampear e entregar para o responsavel.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Logo -->
+            <div class="footer-logo">
+                <a href="/index.html">
+                    <img src="/assets/SamCordis ( logo branca ).png" alt="Hospital Samcordis">
+                </a>
+            </div>
+
+            <!-- Informações -->
+            <div class="footer-info">
+                <div class="footer-item">
+                    <h4>Responsável pelo site</h4>
+                    <p>Tecnologia da Informação (TI)<br><b>Ramal 2257</b></p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Responsável pelo Cardápio</h4>
+                    <p>Setor de Nutrição<br><b>Ramal 2220</b></p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Responsável pelas Notícias</h4>
+                    <p>Recursos Humanos (RH)<br><b>Ramal 2262</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>© 2025 - 2026 | Todos os direitos reservados a equipe da TI</p>
+        </div>   
+    </footer>
+    <script>
+        if (localStorage.getItem("nivel") !== "ti") {
+            window.location.href = "/login.html";
+        }
+
+        if (localStorage.getItem("nivel") !== "ti") {
+            window.location.href = "/login.html";
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const text = "Entrada de Serviço";
+            const element = document.getElementById("typewriter");
+            let index = 0;
+
+            function typeEffect() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, 40); // velocidade da digitação
+                }
+            }
+
+            typeEffect();
+        });
+    </script>
+    <script src="/js/login.js"></script>
+    <script src="/js/buttons.js"></script>
+    <script src="/js/navbar-loader.js"></script>
+    <script src="/js/auth.js"></script>
+    <script>
+        requireAuth("ti");
+    </script>
+</body>
+
+</html>

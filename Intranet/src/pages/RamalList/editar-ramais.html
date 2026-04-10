@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Ramais - Hospital Samcordis</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #000;
+        }
+
+        h1 {
+            text-align: center;
+            background: #2a57a3;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            border: 2px solid #2a57a3;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        #btnAdd {
+            background: #2a57a3;
+            color: white;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        #btnAdd:hover {
+            background: #1c417a;
+        }
+
+        #btnSalvar {
+            background: #008c3c;
+            color: white;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #btnSalvar:hover {
+            background: #00662c;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #cfd7e0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #2a57a3;
+            color: white;
+        }
+
+        .btnEditar {
+            background: #f0ad4e;
+            color: white;
+        }
+
+        .btnEditar:hover {
+            background: #d68c28;
+        }
+
+        .btnExcluir {
+            background: #c9302c;
+            color: white;
+        }
+
+        .btnExcluir:hover {
+            background: #9a2320;
+        }
+
+        .img-container {
+            margin: 20px 0;
+        }
+
+        .intro {
+            margin-top: 4%;
+            margin-bottom: 2%;
+            font-size: 30px;
+        }
+
+        #search {
+            margin-top: 60px;
+            width: 97%;
+            margin-left: 1%;
+            padding: 14px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            outline: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        #search:focus {
+            box-shadow: 0 0 0 3px rgba(42, 87, 163, 0.3);
+        }
+
+        tbody tr {
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.3s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <main style="margin-bottom: 2%;">
+        <p class="intro" id="typewriter"></p>
+        <div class="container">
+            <!-- FORMULÁRIO DE EDIÇÃO/ADIÇÃO -->
+
+            <label>Setor</label>
+            <input type="text" id="setor">
+            <label>Ramal</label>
+            <input type="text" id="ramal">
+            <label>DDR</label>
+            <input type="text" id="ddr" value="—">
+            <label>Responsável</label>
+            <input type="text" id="responsavel">
+            <button id="btnAdd">Adicionar / Atualizar</button>
+            <button id="btnSalvar">Salvar Alterações</button>
+            <!-- Campo de busca -->
+            <input type="text" id="search" placeholder="Pesquisar por setor, nome ou ramal..." onkeyup="filtrarTabela()" />
+            <!-- TABELA EDITÁVEL -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Setor</th>
+                        <th>Ramal</th>
+                        <th>DDR</th>
+                        <th>Responsável</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaRamais"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Logo -->
+            <div class="footer-logo">
+                <a href="/index.html">
+                    <img src="/assets/SamCordis ( logo branca ).png" alt="Hospital Samcordis">
+                </a>
+            </div>
+
+            <!-- Informações -->
+            <div class="footer-info">
+                <div class="footer-item">
+                    <h4>Responsável pelo site</h4>
+                    <p>Tecnologia da Informação (TI)<br><b>Ramal 2257</b></p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Responsável pelo Cardápio</h4>
+                    <p>Setor de Nutrição<br><b>Ramal 2220</b></p>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Responsável pelas Notícias</h4>
+                    <p>Recursos Humanos (RH)<br><b>Ramal 2262</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>© 2026 | Todos os direitos reservados
+            <div class="">
+                </reservados>
+                </p>
+            </div>
+    </footer>
+    <script>
+        let listaRamais = [];
+        let editIndex = -1;
+
+        // 🔵 Carregar JSON do servidor
+        async function carregarDados() {
+            const response = await fetch("ramais.json?cache=" + Date.now());
+            listaRamais = await response.json();
+            atualizarTabela();
+        }
+
+        // 🔵 Preencher tabela
+        function atualizarTabela() {
+            const tabela = document.getElementById("tabelaRamais");
+            tabela.innerHTML = "";
+
+            listaRamais.forEach((item, index) => {
+                tabela.innerHTML += `
+                <tr>
+                    <td>${item.setor}</td>
+                    <td>${item.ramal}</td>
+                    <td>${item.ddr}</td>
+                    <td>${item.responsavel}</td>
+                    <td>
+                        <button class="btnEditar" onclick="editar(${index})">Editar</button>
+                        <button class="btnExcluir" onclick="excluir(${index})">Excluir</button>
+                    </td>
+                </tr>
+            `;
+            });
+        }
+
+        // 🔵 Editar item
+        function editar(i) {
+            editIndex = i;
+            const item = listaRamais[i];
+
+            document.getElementById("setor").value = item.setor;
+            document.getElementById("ramal").value = item.ramal;
+            document.getElementById("ddr").value = item.ddr;
+            document.getElementById("responsavel").value = item.responsavel;
+        }
+
+        // 🔵 Excluir item
+        function excluir(i) {
+            if (!confirm("Tem certeza que deseja excluir este ramal?")) return;
+
+            listaRamais.splice(i, 1);
+            atualizarTabela();
+        }
+
+        // 🔵 Adicionar ou atualizar
+        document.getElementById("btnAdd").onclick = () => {
+            const novo = {
+                setor: document.getElementById("setor").value.trim(),
+                ramal: document.getElementById("ramal").value.trim(),
+                ddr: document.getElementById("ddr").value.trim(),
+                responsavel: document.getElementById("responsavel").value.trim()
+            };
+
+            if (!novo.setor || !novo.ramal) {
+                alert("Setor e Ramal são obrigatórios!");
+                return;
+            }
+
+            if (editIndex === -1) {
+                listaRamais.push(novo);
+            } else {
+                listaRamais[editIndex] = novo;
+                editIndex = -1;
+            }
+
+            document.getElementById("setor").value = "";
+            document.getElementById("ramal").value = "";
+            document.getElementById("ddr").value = "";
+            document.getElementById("responsavel").value = "";
+
+            atualizarTabela();
+        };
+
+        // 🔵 Salvar alterações (envia para PHP)
+        document.getElementById("btnSalvar").onclick = async () => {
+            const response = await fetch("save-ramais.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(listaRamais)
+            });
+
+            const resultado = await response.text();
+            alert(resultado);
+        };
+
+        // ================================================
+        // 🔵 FILTRAR
+        // ================================================
+        function filtrarTabela() {
+      const filtro = document.getElementById("search").value.toLowerCase();
+      const tbody = document.getElementById("tabelaRamais");
+      const linhas = Array.from(tbody.querySelectorAll("tr"));
+
+      let visiveis = 0;
+
+      linhas.forEach(linha => {
+        // Ignora a linha de mensagem
+        if (linha.classList.contains("no-result")) return;
+
+        const match = linha.innerText.toLowerCase().includes(filtro);
+        linha.style.display = match ? "" : "none";
+
+        if (match) visiveis++;
+      });
+
+      // Remove mensagem antiga se existir
+      const msgAntiga = tbody.querySelector(".no-result");
+      if (msgAntiga) msgAntiga.remove();
+
+      // Se não houver resultados, cria a linha
+      if (visiveis === 0) {
+        const tr = document.createElement("tr");
+        tr.classList.add("no-result");
+
+        tr.innerHTML = `
+      <td colspan="5" style="
+        padding: 20px;
+        font-weight: bold;
+        color: #c0392b;
+        background: #fdecea;
+      ">
+        ❌ Nenhum ramal encontrado
+      </td>
+    `;
+
+        tbody.appendChild(tr);
+      }
+    }
+        // function filtrarTabela() {
+        //     const filtro = document.getElementById("search").value.toLowerCase();
+        //     const linhas = document.querySelectorAll("#tabelaRamais tr");
+
+        //     linhas.forEach(linha => {
+        //         linha.style.display = linha.innerText.toLowerCase().includes(filtro) ? "" : "none";
+        //     });
+        // }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const text = "PAINEL DE MODIFICAÇÃO DE RAMAIS.";
+            const element = document.getElementById("typewriter");
+            let index = 0;
+
+            function typeEffect() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, 40); // velocidade da digitação
+                }
+            }
+
+            typeEffect();
+        });
+
+        carregarDados();
+    </script>
+    <script src="/js/login.js"></script>
+    <script src="/js/buttons.js"></script>
+    <script src="/js/navbar-loader.js"></script>
+    <script src="/js/auth.js"></script>
+    <script>
+        requireAuth("ti");
+    </script>
+</body>
+
+</html>
