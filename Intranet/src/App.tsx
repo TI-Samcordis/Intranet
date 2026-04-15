@@ -3,9 +3,10 @@ import Home from "./pages/Home/Home";
 import "./index.css";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/Footer";
-import KitchenMenu      from "./pages/KitchenMenu/KitchenMenu";
-import KitchenMenuNutri from "./pages/KitchenMenu/KitchenMenuNutri";
-import EditCardapio     from "./pages/KitchenMenu/EditCardapio";
+import KitchenMenuNutri from "./pages/KitchenMenu/kitchenMenuNutri";
+import EditCardapio from "./pages/KitchenMenu/editCardapio";
+import KitchenMenu from "./pages/KitchenMenu/kitchenMenu";
+
 
 // Importe as demais páginas aqui conforme for criando:
 // import Login from "./pages/Login/Login";
@@ -40,9 +41,8 @@ function ProtectedRoute({ roles, children }: ProtectedRouteProps) {
 export default function App() {
   return (
     <BrowserRouter>
-    <Navbar/>
+      <Navbar />
       <Routes>
-
         {/* Página inicial — dinâmica por role */}
         <Route path="/" element={<Home />} />
 
@@ -63,11 +63,25 @@ export default function App() {
           </ProtectedRoute>
         } /> */}
 
-        {/* <Route path="/cardapio/editar" element={
-          <ProtectedRoute roles={["ti", "nutri"]}>
-            <KitchenMenuNutri />
-          </ProtectedRoute>
-        } /> */}
+        <Route
+          path="/cardapio/nutri"
+          element={
+            <ProtectedRoute roles={["ti", "nutri"]}>
+              <KitchenMenuNutri />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route path="/cardapio" element={<KitchenMenu />} />
+
+        <Route
+          path="/cardapio/editar"
+          element={
+            <ProtectedRoute roles={["ti", "nutri"]}>
+              <EditCardapio />
+            </ProtectedRoute>
+          }
+        />
 
         {/* <Route path="/noticias/editar" element={
           <ProtectedRoute roles={["ti", "rh"]}>
@@ -77,9 +91,8 @@ export default function App() {
 
         {/* Fallback — rota não encontrada */}
         <Route path="*" element={<Navigate to="/" replace />} />
-
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }
