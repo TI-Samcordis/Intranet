@@ -28,6 +28,7 @@ const INTERNAL: Record<string, string> = {
   cardapio: "/cardapio",
   cardapioNutri: "/cardapio/nutri",
   noticias: "/noticias",
+  noticiasRH: "/noticias/rh",
   ramal: "/ramais",
   editRamal: "/ramais/editar",
   chamado: "/chamado",
@@ -284,6 +285,7 @@ export default function Navbar() {
     navigate("/");
   };
   const isTI = role === "ti";
+  const isNews = role === "rh" || role === "ti";
 
   const logoSrc = isTI
     ? "/assets/TISamCordis2.png"
@@ -304,7 +306,7 @@ export default function Navbar() {
       {/* ── ESQUERDA ── */}
       <div className={styles.navLeft}>
         <button className={styles.logoBtn} onClick={handleHome}>
-          <img src={logoSrc} alt="Samcordis" />
+          <img src={logoSrc} alt="Samcordis" style={{ marginBottom: "10px" }} />
         </button>
       </div>
 
@@ -341,9 +343,21 @@ export default function Navbar() {
           )}
         </div>
 
-        <button className={styles.navBtn} onClick={() => onAction("noticias")}>
-          Notícias
-        </button>
+        {isNews ? (
+          <button
+            className={styles.navBtn}
+            onClick={() => onAction("noticiasRH")}
+          >
+            Notícias
+          </button>
+        ) : (
+          <button
+            className={styles.navBtn}
+            onClick={() => onAction("noticias")}
+          >
+            Notícias
+          </button>
+        )}
       </div>
 
       {/* ── DIREITA ── */}

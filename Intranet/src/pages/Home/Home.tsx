@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Footer from "../../components/Footer";
 import styles from "./Home.module.css";
 
 // ─── Tipos ───────────────────────────────────────────────────────────────────
@@ -159,7 +158,7 @@ function useLatestNoticia() {
   const [erro, setErro] = useState(false);
 
   useEffect(() => {
-    fetch(`/pages/SamNews/noticias.json?v=${Date.now()}`)
+    fetch(`/data/noticias.json?v=${Date.now()}`)
       .then((r) => {
         if (!r.ok) throw new Error("Erro ao buscar notícias");
         return r.json();

@@ -1,0 +1,430 @@
+/* =========================
+   SAMNEWS — CSS MODULE
+   Compartilhado por SamNews, SamNewsRH e EditNoticias
+   ========================= */
+
+/* ── Layout base ── */
+
+.main {
+    margin-top: 3.5em;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 3.5em);
+}
+
+.mainEdit {
+    margin-top: 3.5em;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 3.5em);
+}
+
+/* ── Título da página ── */
+
+.titulo {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2a57a3;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* ── Estados de carregamento/erro ── */
+
+.loading,
+.erro {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.erro { color: #b52d2a; font-weight: bold; }
+.loading { color: #888; }
+
+/* ── Lista de notícias ── */
+
+.lista {
+    width: 100%;
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ── Card base ── */
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    animation: entrar 0.4s ease both;
+    transition: box-shadow 0.25s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 32px rgba(42, 87, 163, 0.15);
+}
+
+@keyframes entrar {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Card COM imagem — lado a lado ── */
+
+.cardComImagem .cardLayout {
+    display: flex;
+    gap: 0;
+}
+
+.imagemWrapper {
+    flex-shrink: 0;
+    width: 200px;
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Card SEM imagem — texto full width ── */
+
+.cardSemImagem .cardConteudo {
+    padding: 28px 32px;
+}
+
+/* ── Conteúdo do card ── */
+
+.cardConteudo {
+    padding: 24px 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cardTitulo {
+    font-size: 1.4rem;
+    color: #1a3a6e;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.cardData {
+    font-size: 0.8rem;
+    color: #888;
+    display: block;
+}
+
+.cardTexto {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333;
+    margin-top: 8px;
+    flex: 1;
+}
+
+/* ── Botão editar (SamNewsRH) ── */
+
+.btnEditar {
+    display: block;
+    margin: 0 auto 30px auto;
+    padding: 10px 28px;
+    width: 220px;
+    text-align: center;
+    border: 2px solid #2a57a3;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #fff;
+    color: #2a57a3;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btnEditar:hover {
+    background: #2a57a3;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(42, 87, 163, 0.4);
+}
+
+/* ── Botão excluir ── */
+
+.btnExcluir {
+    margin-top: auto;
+    padding: 7px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #b52d2a;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btnExcluir:hover {
+    background: #e64542;
+    transform: scale(1.04);
+}
+
+/* =========================
+   EDITNOTICIAS
+   ========================= */
+
+.editCard {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    padding: 36px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.editTitulo {
+    font-size: 1.8rem;
+    color: #2a57a3;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+/* ── Input título ── */
+
+.inputTitulo {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.inputTitulo:focus {
+    outline: none;
+    border-color: #2a57a3;
+    box-shadow: 0 0 10px rgba(42, 87, 163, 0.2);
+}
+
+/* ── Toolbar ── */
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.toolbarBtn {
+    background: #f0f2f5;
+    border: none;
+    padding: 7px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.toolbarBtn:hover {
+    background: #dfe3ea;
+}
+
+/* ── Editor ── */
+
+.editor {
+    min-height: 260px;
+    background: #fafafa;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    line-height: 1.7;
+    font-family: "Segoe UI", sans-serif;
+    transition: border-color 0.3s;
+}
+
+.editor:focus {
+    outline: none;
+    border-color: #2a57a3;
+    box-shadow: 0 0 10px rgba(42, 87, 163, 0.15);
+}
+
+.editor:empty::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    pointer-events: none;
+}
+
+/* ── Upload imagem ── */
+
+.labelImagem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px dashed #2a57a3;
+    border-radius: 10px;
+    color: #2a57a3;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.labelImagem:hover {
+    background: #f0f4ff;
+}
+
+.inputFile {
+    display: none;
+}
+
+.erroImagem {
+    color: #b52d2a;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* ── Preview da imagem ── */
+
+.previewWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.previewImg {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.btnRemoverImg {
+    padding: 6px 14px;
+    border: 1px solid #b52d2a;
+    border-radius: 6px;
+    background: #fff;
+    color: #b52d2a;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btnRemoverImg:hover {
+    background: #b52d2a;
+    color: #fff;
+}
+
+/* ── Feedbacks ── */
+
+.feedbackOk {
+    text-align: center;
+    color: #1a7a3a;
+    font-weight: bold;
+    animation: fadeIn 0.3s ease;
+}
+
+.feedbackErro {
+    text-align: center;
+    color: #b52d2a;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Botões de ação ── */
+
+.acoes {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.btnPublicar {
+    padding: 11px 30px;
+    width: 200px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #2a57a3;
+    color: #fff;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btnPublicar:hover:not(:disabled) {
+    background: #224b91;
+    box-shadow: 0 0 15px rgba(42, 87, 163, 0.5);
+}
+
+.btnPublicar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btnVoltar {
+    padding: 11px 30px;
+    width: 200px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #791e1b;
+    color: #fff;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btnVoltar:hover {
+    background: #a02522;
+    box-shadow: 0 0 15px rgba(247, 69, 37, 0.4);
+}
+
+/* ── Responsivo ── */
+
+@media (max-width: 768px) {
+    .cardComImagem .cardLayout {
+        flex-direction: column;
+    }
+
+    .imagemWrapper {
+        width: 100%;
+        height: 220px;
+    }
+
+    .imagem {
+        min-height: unset;
+        height: 220px;
+    }
+
+    .acoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .editCard {
+        padding: 20px;
+    }
+}

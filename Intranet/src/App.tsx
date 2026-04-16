@@ -6,6 +6,10 @@ import Footer from "./components/Footer";
 import KitchenMenuNutri from "./pages/KitchenMenu/kitchenMenuNutri";
 import EditCardapio from "./pages/KitchenMenu/editCardapio";
 import KitchenMenu from "./pages/KitchenMenu/kitchenMenu";
+import SamNews from "./pages/SamNews/SamNews";
+import SamNewsRH from "./pages/SamNews/SamNewsRH";
+import EditNoticias from "./pages/SamNews/EditNoticias";
+import AcessMvSoul from "./pages/AcessMv/acessMVSoul";
 
 
 // Importe as demais páginas aqui conforme for criando:
@@ -49,12 +53,23 @@ export default function App() {
         {/* Login — descomente quando criar o componente */}
         {/* <Route path="/login" element={<Login />} /> */}
 
-        {/* Páginas abertas para todos logados */}
-        {/* <Route path="/noticias" element={
-          <ProtectedRoute>
-            <SamNews />
+        <Route path="/acessmv" element={
+          <AcessMvSoul/>
+        } />
+
+        <Route path="/noticias/rh" element={
+          <ProtectedRoute roles={["ti", "rh"]}>
+            <SamNewsRH />
           </ProtectedRoute>
-        } /> */}
+        }/>
+                
+        <Route path="/noticias" element={<SamNews />} />        
+
+        <Route path="/noticias/editar" element={
+          <ProtectedRoute roles={["ti","rh"]}>
+            <EditNoticias />
+          </ProtectedRoute>
+        } />
 
         {/* Páginas restritas por role */}
         {/* <Route path="/editar-ramal" element={
