@@ -13,13 +13,13 @@ interface Noticia {
   mensagem?: string;
 }
 
-interface ToolItem {
-  id: string;
-  alt: string;
-  src: string;
-  href: string;
-  external: boolean;
-}
+// interface ToolItem {
+//   id: string;
+//   alt: string;
+//   src: string;
+//   href: string;
+//   external: boolean;
+// }
 
 // ─── Configuração por role ────────────────────────────────────────────────────
 
@@ -69,43 +69,43 @@ const ROLE_CONFIG: Record<
 
 // ─── Ferramentas (mesmas para todos os roles) ─────────────────────────────────
 
-const TOOLS: ToolItem[] = [
-  {
-    id: "hsp",
-    alt: "HSP_LOGO",
-    src: "/assets/LOGOS/HSP_LOGO-removebg.png",
-    href: "http://app.hspsoftware.com.br/",
-    external: true,
-  },
-  {
-    id: "email",
-    alt: "EMAIL_LOGO",
-    src: "/assets/LOGOS/EMAIL_LOGO-removebg.png",
-    href: "https://outlook.office365.com/mail/",
-    external: true,
-  },
-  {
-    id: "cloud",
-    alt: "PLANNER_LOGO",
-    src: "/assets/LOGOS/PLANNER_LOGO-removebg.png",
-    href: "https://planner.cloud.microsoft/webui/",
-    external: true,
-  },
-  {
-    id: "sharepoint",
-    alt: "SHAREPOINT_LOGO",
-    src: "/assets/LOGOS/SHAREPOINT_LOGO-removebg.png",
-    href: "https://samcordiscombr.sharepoint.com/sites/Samcordis",
-    external: true,
-  },
-  {
-    id: "teams",
-    alt: "TEAMS_LOGO",
-    src: "/assets/LOGOS/TEAMS_LOGO-removebg.png",
-    href: "/teams",
-    external: false,
-  },
-];
+// const TOOLS: ToolItem[] = [
+//   {
+//     id: "hsp",
+//     alt: "HSP_LOGO",
+//     src: "/assets/LOGOS/HSP_LOGO-removebg.png",
+//     href: "http://app.hspsoftware.com.br/",
+//     external: true,
+//   },
+//   {
+//     id: "email",
+//     alt: "EMAIL_LOGO",
+//     src: "/assets/LOGOS/EMAIL_LOGO-removebg.png",
+//     href: "https://outlook.office365.com/mail/",
+//     external: true,
+//   },
+//   {
+//     id: "cloud",
+//     alt: "PLANNER_LOGO",
+//     src: "/assets/LOGOS/PLANNER_LOGO-removebg.png",
+//     href: "https://planner.cloud.microsoft/webui/",
+//     external: true,
+//   },
+//   {
+//     id: "sharepoint",
+//     alt: "SHAREPOINT_LOGO",
+//     src: "/assets/LOGOS/SHAREPOINT_LOGO-removebg.png",
+//     href: "https://samcordiscombr.sharepoint.com/sites/Samcordis",
+//     external: true,
+//   },
+//   {
+//     id: "teams",
+//     alt: "TEAMS_LOGO",
+//     src: "/assets/LOGOS/TEAMS_LOGO-removebg.png",
+//     href: "/teams",
+//     external: false,
+//   },
+// ];
 
 // ─── Hook: efeito typewriter (binário → texto, apenas para TI) ────────────────
 
@@ -187,14 +187,6 @@ export default function Home() {
   useEffect(() => {
     document.title = config.title;
   }, [config.title]);
-
-  const handleToolClick = (tool: ToolItem) => {
-    if (tool.external) {
-      window.open(tool.href, "_blank");
-    } else {
-      navigate(tool.href);
-    }
-  };
 
   const dataFmt = noticia?.dataPublicacao
     ? new Date(noticia.dataPublicacao).toLocaleString("pt-BR")

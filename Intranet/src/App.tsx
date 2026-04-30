@@ -9,7 +9,7 @@ import KitchenMenu from "./pages/KitchenMenu/kitchenMenu";
 import SamNews from "./pages/SamNews/SamNews";
 import SamNewsRH from "./pages/SamNews/SamNewsRH";
 import EditNoticias from "./pages/SamNews/EditNoticias";
-import AcessMvSoul from "./pages/AcessMv/acessMVSoul";
+import AcessMVSoul from "./pages/AcessMv/AcessMVSoul";
 
 
 // Importe as demais páginas aqui conforme for criando:
@@ -53,8 +53,10 @@ export default function App() {
         {/* Login — descomente quando criar o componente */}
         {/* <Route path="/login" element={<Login />} /> */}
 
-        <Route path="/acessmv" element={
-          <AcessMvSoul/>
+        <Route path="/acessMVSoul" element={
+          <ProtectedRoute>
+            <AcessMVSoul />
+          </ProtectedRoute>
         } />
 
         <Route path="/noticias/rh" element={

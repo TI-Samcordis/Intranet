@@ -4,7 +4,7 @@ import { useAuth } from "../../hooks/useAuth";
 
 // ─── Tipos ───────────────────────────────────────────────────────────────────
 
-type Role = "ti" | "nutri" | "rh" | "telefonia" | null;
+// type Role = "ti" | "nutri" | "rh" | "telefonia" | null;
 
 // ─── Configuração de links externos (do buttons.js) ───────────────────────────
 
@@ -20,8 +20,6 @@ const EXTERNAL: Record<string, string> = {
   kaspersky: "https://192.168.0.136:8080/login#/monitoring/dashboard",
   fme: "http://192.168.0.194:33052/login/noaccess",
   intelbras: "https://192.168.0.112:4445/#/home/usuario",
-  mvsoul: "/pages/AcessMv/acessMVSoul.html",
-  mvpep: "/pages/AcessMv/acessMVPep.html",
 };
 
 const INTERNAL: Record<string, string> = {
@@ -33,6 +31,7 @@ const INTERNAL: Record<string, string> = {
   editRamal: "/ramais/editar",
   chamado: "/chamado",
   teams: "/teams",
+  mvsoul: "/acessMVSoul",
 };
 
 // ─── Hook de navegação ────────────────────────────────────────────────────────

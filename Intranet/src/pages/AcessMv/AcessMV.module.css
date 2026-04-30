@@ -1,0 +1,71 @@
+/* =========================
+   ACESSMV — CSS MODULE
+   ========================= */
+
+.content {
+    padding-top: 3.5em; /* compensa a navbar fixa */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstSection {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    scroll-snap-align: start;
+}
+
+.intro {
+    margin-top: 7%;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.logoMv {
+    display: block;
+    margin: 40px auto;
+    max-width: 25%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ── Copiar link ── */
+
+.copyContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 3%;
+    margin-top: 10px;
+}
+
+.copyBtn {
+    cursor: pointer;
+    border: none;
+    background: #ddd;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.copyBtn:hover {
+    background: #ccc;
+}
+
+.copiado {
+    color: green;
+    font-weight: bold;
+    font-size: 0.9rem;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

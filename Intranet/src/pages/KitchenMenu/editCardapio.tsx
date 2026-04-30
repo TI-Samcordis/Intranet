@@ -42,7 +42,6 @@ const DIAS = [
   { key: "sabado",  label: "Sábado"  },
 ];
 
-const DIAS_KEY_INDEX = DIAS.map((d) => d.key);
 
 // ─── Estado inicial vazio ─────────────────────────────────────────────────────
 
